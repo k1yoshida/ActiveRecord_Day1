@@ -1,0 +1,338 @@
+learn13:activeRecordCC learn$ mkdir Task_list
+learn13:activeRecordCC learn$ clear
+
+learn13:activeRecordCC learn$ rails new Task_List -T --database=postgres
+Invalid value for --database option. Supported for preconfiguration are: mysql, postgresql, sqlite3, oracle, frontbase, ibm_db, sqlserver, jdbcmysql, jdbcsqlite3, jdbcpostgresql, jdbc.
+learn13:activeRecordCC learn$ rails new Task_List -T --database=postgresql
+       exist  
+      create  README.md
+      create  Rakefile
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+         run  git init from "."
+Initialized empty Git repository in /Users/learn/Desktop/activeRecordCC/Task_list/.git/
+      create  app
+      create  app/assets/config/manifest.js
+      create  app/assets/javascripts/application.js
+      create  app/assets/javascripts/cable.js
+      create  app/assets/stylesheets/application.css
+      create  app/channels/application_cable/channel.rb
+      create  app/channels/application_cable/connection.rb
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/jobs/application_job.rb
+      create  app/mailers/application_mailer.rb
+      create  app/models/application_record.rb
+      create  app/views/layouts/application.html.erb
+      create  app/views/layouts/mailer.html.erb
+      create  app/views/layouts/mailer.text.erb
+      create  app/assets/images/.keep
+      create  app/assets/javascripts/channels
+      create  app/assets/javascripts/channels/.keep
+      create  app/controllers/concerns/.keep
+      create  app/models/concerns/.keep
+      create  bin
+      create  bin/bundle
+      create  bin/rails
+      create  bin/rake
+      create  bin/setup
+      create  bin/update
+      create  bin/yarn
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/secrets.yml
+      create  config/cable.yml
+      create  config/puma.rb
+      create  config/spring.rb
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/application_controller_renderer.rb
+      create  config/initializers/assets.rb
+      create  config/initializers/backtrace_silencers.rb
+      create  config/initializers/cookies_serializer.rb
+      create  config/initializers/cors.rb
+      create  config/initializers/filter_parameter_logging.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/mime_types.rb
+      create  config/initializers/new_framework_defaults_5_1.rb
+      create  config/initializers/wrap_parameters.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/boot.rb
+      create  config/database.yml
+      create  db
+      create  db/seeds.rb
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.keep
+      create  lib/assets
+      create  lib/assets/.keep
+      create  log
+      create  log/.keep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/apple-touch-icon-precomposed.png
+      create  public/apple-touch-icon.png
+      create  public/favicon.ico
+      create  public/robots.txt
+      create  tmp
+      create  tmp/.keep
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor
+      create  vendor/.keep
+      create  package.json
+      remove  config/initializers/cors.rb
+      remove  config/initializers/new_framework_defaults_5_1.rb
+         run  bundle install
+The latest bundler is 1.16.0, but you are currently running 1.15.4.
+To update, run `gem install bundler`
+The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+Fetching gem metadata from https://rubygems.org/..........
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Resolving dependencies...
+Using rake 12.2.1
+Using concurrent-ruby 1.0.5
+Using minitest 5.10.3
+Using thread_safe 0.3.6
+Using builder 3.2.3
+Using erubi 1.7.0
+Using mini_portile2 2.3.0
+Using crass 1.0.2
+Using rack 2.0.3
+Using nio4r 2.1.0
+Using websocket-extensions 0.1.2
+Using mini_mime 1.0.0
+Using arel 8.0.0
+Using bindex 0.5.0
+Using bundler 1.15.4
+Using byebug 9.1.0
+Using coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using method_source 0.9.0
+Using thor 0.20.0
+Using ffi 1.9.18
+Using multi_json 1.12.2
+Using rb-fsevent 0.10.2
+Using ruby_dep 1.5.0
+Using pg 0.21.0
+Using puma 3.10.0
+Using tilt 2.0.8
+Using turbolinks-source 5.0.3
+Using i18n 0.9.1
+Using tzinfo 1.2.4
+Using nokogiri 1.8.1
+Using rack-test 0.7.0
+Using sprockets 3.7.1
+Using websocket-driver 0.6.5
+Using mail 2.7.0
+Using coffee-script 2.4.1
+Using uglifier 3.2.0
+Using rb-inotify 0.9.10
+Using turbolinks 5.0.1
+Using activesupport 5.1.4
+Using loofah 2.1.1
+Using listen 3.1.5
+Using sass-listen 4.0.0
+Using rails-dom-testing 2.0.3
+Using globalid 0.4.1
+Using activemodel 5.1.4
+Using jbuilder 2.7.0
+Using spring 2.0.2
+Using rails-html-sanitizer 1.0.3
+Using sass 3.5.3
+Using activejob 5.1.4
+Using activerecord 5.1.4
+Using spring-watcher-listen 2.0.1
+Using actionview 5.1.4
+Using actionpack 5.1.4
+Using actioncable 5.1.4
+Using actionmailer 5.1.4
+Using railties 5.1.4
+Using sprockets-rails 3.2.1
+Using coffee-rails 4.2.2
+Using web-console 3.5.1
+Using rails 5.1.4
+Using sass-rails 5.0.6
+Bundle complete! 14 Gemfile dependencies, 63 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+         run  bundle exec spring binstub --all
+* bin/rake: spring inserted
+* bin/rails: spring inserted
+learn13:activeRecordCC learn$ cd Task_list/
+learn13:Task_list learn$ atom .
+learn13:Task_list learn$ rails db:create
+Created database 'Task_List_development'
+Created database 'Task_List_test'
+learn13:Task_list learn$ rails c
+Running via Spring preloader in process 78735
+Loading development environment (Rails 5.1.4)
+cannot load such file -- irbtools
+2.3.1 :001 > task = Task.new
+ => #<Task id: nil, title: nil, description: nil> 
+2.3.1 :002 > task
+ => #<Task id: nil, title: nil, description: nil> 
+2.3.1 :003 > task.create(title: "buy milk", description: "go to the store and pick it up")
+NoMethodError: undefined method `create' for #<Task id: nil, title: nil, description: nil>
+	from (irb):3
+2.3.1 :004 > task2 = Task.new(title: "buy milk", description: "go to the store and pick it up")
+ => #<Task id: nil, title: "buy milk", description: "go to the store and pick it up"> 
+2.3.1 :005 > task.title = "laundry"
+ => "laundry" 
+2.3.1 :006 > task
+ => #<Task id: nil, title: "laundry", description: nil> 
+2.3.1 :007 > task.description = "go to laundry room and do your washing"
+ => "go to laundry room and do your washing" 
+2.3.1 :008 > task.save
+   (0.2ms)  BEGIN
+  SQL (0.6ms)  INSERT INTO "tasks" ("title", "description") VALUES ($1, $2) RETURNING "id"  [["title", "laundry"], ["description", "go to laundry room and do your washing"]]
+   (40.7ms)  COMMIT
+ => true 
+2.3.1 :009 > task2.save
+   (0.2ms)  BEGIN
+  SQL (0.4ms)  INSERT INTO "tasks" ("title", "description") VALUES ($1, $2) RETURNING "id"  [["title", "buy milk"], ["description", "go to the store and pick it up"]]
+   (0.5ms)  COMMIT
+ => true 
+2.3.1 :010 > /d
+2.3.1 :011/> ;
+2.3.1 :012/> tasks.all
+2.3.1 :013/> task.all
+2.3.1 :014/> task2.all
+2.3.1 :015/> Task.all
+2.3.1 :016/> exit
+2.3.1 :017/> quit
+2.3.1 :018/> \q
+2.3.1 :019/> /q
+SyntaxError: (irb):19: unknown regexp option - q
+
+2.3.1 :020 > ^C
+2.3.1 :020 > ^C
+2.3.1 :020 > exit
+learn13:Task_list learn$ rails c
+Running via Spring preloader in process 78960
+Loading development environment (Rails 5.1.4)
+cannot load such file -- irbtools
+2.3.1 :001 > Task.all
+  Task Load (0.2ms)  SELECT  "tasks".* FROM "tasks" LIMIT $1  [["LIMIT", 11]]
+ => #<ActiveRecord::Relation [#<Task id: 1, title: "laundry", description: "go to laundry room and do your washing">, #<Task id: 2, title: "buy milk", description: "go to the store and pick it up">]> 
+2.3.1 :002 > add_column :status
+NoMethodError: undefined method `add_column' for main:Object
+	from (irb):2
+2.3.1 :003 > add_column :tasks, :status, :boolean
+NoMethodError: undefined method `add_column' for main:Object
+	from (irb):3
+2.3.1 :004 > task
+NameError: undefined local variable or method `task' for main:Object
+	from (irb):4
+2.3.1 :005 > task2
+NameError: undefined local variable or method `task2' for main:Object
+	from (irb):5
+2.3.1 :006 > Task.find_by_title("laundry").status = true
+  Task Load (0.3ms)  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."title" = $1 LIMIT $2  [["title", "laundry"], ["LIMIT", 1]]
+ => true 
+2.3.1 :007 > task = Task.find_by_title("laundry").status = true
+  Task Load (0.3ms)  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."title" = $1 LIMIT $2  [["title", "laundry"], ["LIMIT", 1]]
+ => true 
+2.3.1 :008 > task.status
+NoMethodError: undefined method `status' for true:TrueClass
+	from (irb):8
+2.3.1 :009 > task.save
+NoMethodError: undefined method `save' for true:TrueClass
+	from (irb):9
+2.3.1 :010 > task = Task.find_by_title("laundry").update.status = true
+  Task Load (0.3ms)  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."title" = $1 LIMIT $2  [["title", "laundry"], ["LIMIT", 1]]
+ArgumentError: wrong number of arguments (given 0, expected 1)
+	from (irb):10
+2.3.1 :011 > exit
+learn13:Task_list learn$ rails c
+Running via Spring preloader in process 79075
+Loading development environment (Rails 5.1.4)
+cannot load such file -- irbtools
+2.3.1 :001 > Task.find_by_title("laundry").update.status = true
+  Task Load (0.3ms)  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."title" = $1 LIMIT $2  [["title", "laundry"], ["LIMIT", 1]]
+ArgumentError: wrong number of arguments (given 0, expected 1)
+	from (irb):1
+2.3.1 :002 > Task.find_by_title("laundry").update.status(true)
+  Task Load (0.3ms)  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."title" = $1 LIMIT $2  [["title", "laundry"], ["LIMIT", 1]]
+ArgumentError: wrong number of arguments (given 0, expected 1)
+	from (irb):2
+2.3.1 :003 > insert into tasks (status) values (true)
+SyntaxError: (irb):3: syntax error, unexpected tIDENTIFIER, expecting end-of-input
+insert into tasks (status) values (true)
+                                 ^
+
+2.3.1 :004 > insert into tasks (status) value (true)
+SyntaxError: (irb):4: syntax error, unexpected tIDENTIFIER, expecting end-of-input
+insert into tasks (status) value (true)
+                                ^
+
+2.3.1 :005 > Task.find_by_title("laundry").status = true
+  Task Load (0.3ms)  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."title" = $1 LIMIT $2  [["title", "laundry"], ["LIMIT", 1]]
+ => true 
+2.3.1 :006 > Task.find_by_title("laundry").status.update = true
+  Task Load (0.3ms)  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."title" = $1 LIMIT $2  [["title", "laundry"], ["LIMIT", 1]]
+NoMethodError: undefined method `update=' for nil:NilClass
+	from (irb):6
+2.3.1 :007 > Task.find_by_title("laundry").status.update(true)
+  Task Load (0.3ms)  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."title" = $1 LIMIT $2  [["title", "laundry"], ["LIMIT", 1]]
+NoMethodError: undefined method `update' for nil:NilClass
+	from (irb):7
+2.3.1 :008 > status1 = Task.find(1)
+  Task Load (0.3ms)  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2  [["id", 1], ["LIMIT", 1]]
+ => #<Task id: 1, title: "laundry", description: "go to laundry room and do your washing", status: nil> 
+2.3.1 :009 > status1
+ => #<Task id: 1, title: "laundry", description: "go to laundry room and do your washing", status: nil> 
+2.3.1 :010 > status1.status = true
+ => true 
+2.3.1 :011 > status1.save
+   (0.2ms)  BEGIN
+  SQL (0.4ms)  UPDATE "tasks" SET "status" = $1 WHERE "tasks"."id" = $2  [["status", "t"], ["id", 1]]
+   (0.5ms)  COMMIT
+ => true 
+2.3.1 :012 > status1.status = true
+ => true 
+2.3.1 :013 > status2 = Task_find(2)
+NoMethodError: undefined method `Task_find' for main:Object
+	from (irb):13
+2.3.1 :014 > status2 = Task.find(2)
+  Task Load (0.3ms)  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2  [["id", 2], ["LIMIT", 1]]
+ => #<Task id: 2, title: "buy milk", description: "go to the store and pick it up", status: nil> 
+2.3.1 :015 > status2.status = false
+ => false 
+2.3.1 :016 > status2.save
+   (0.2ms)  BEGIN
+  SQL (0.4ms)  UPDATE "tasks" SET "status" = $1 WHERE "tasks"."id" = $2  [["status", "f"], ["id", 2]]
+   (0.5ms)  COMMIT
+ => true 
+2.3.1 :017 > Tasks.find_by_status(true)
+NameError: uninitialized constant Tasks
+	from (irb):17
+2.3.1 :018 > Task.find_by_status(true)
+  Task Load (0.3ms)  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."status" = $1 LIMIT $2  [["status", "t"], ["LIMIT", 1]]
+ => #<Task id: 1, title: "laundry", description: "go to laundry room and do your washing", status: true> 
+2.3.1 :019 > Task.find_by_status(false)
+  Task Load (0.3ms)  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."status" = $1 LIMIT $2  [["status", "f"], ["LIMIT", 1]]
+ => #<Task id: 2, title: "buy milk", description: "go to the store and pick it up", status: false> 
+2.3.1 :020 > d = Task.find(2)
+  Task Load (0.4ms)  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2  [["id", 2], ["LIMIT", 1]]
+ => #<Task id: 2, title: "Go for a run", description: "Go for a leisurely stroll!", status: false> 
+2.3.1 :021 > d.destroy
+   (0.1ms)  BEGIN
+  SQL (0.4ms)  DELETE FROM "tasks" WHERE "tasks"."id" = $1  [["id", 2]]
+   (0.5ms)  COMMIT
+ => #<Task id: 2, title: "Go for a run", description: "Go for a leisurely stroll!", status: false> 
+2.3.1 :022 > exit
+learn13:Task_list learn$ pwd
+/Users/learn/desktop/activeRecordCC/Task_list
+learn13:Task_list learn$ touch task_list.txt
+learn13:Task_list learn$ open .
+learn13:Task_list learn$ 
