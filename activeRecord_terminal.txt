@@ -1,0 +1,817 @@
+Last login: Wed Nov  8 11:53:06 on ttys001
+learn13:~ learn$ ls
+Applications	Desktop		Httplogin	Movies		Public
+CarSimulator	Documents	Library		Music
+Car_Challenge	Downloads	Login		Pictures
+learn13:~ learn$ cd Desktop/
+learn13:Desktop learn$ mkdir activeRecordCC
+learn13:Desktop learn$ cd activeRecordCC/
+learn13:activeRecordCC learn$ ls
+learn13:activeRecordCC learn$ pwd
+/Users/learn/Desktop/activeRecordCC
+learn13:activeRecordCC learn$ rails new mydbapp -T --database=postgresql
+      create  
+      create  README.md
+      create  Rakefile
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+         run  git init from "."
+Initialized empty Git repository in /Users/learn/Desktop/activeRecordCC/mydbapp/.git/
+      create  app
+      create  app/assets/config/manifest.js
+      create  app/assets/javascripts/application.js
+      create  app/assets/javascripts/cable.js
+      create  app/assets/stylesheets/application.css
+      create  app/channels/application_cable/channel.rb
+      create  app/channels/application_cable/connection.rb
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/jobs/application_job.rb
+      create  app/mailers/application_mailer.rb
+      create  app/models/application_record.rb
+      create  app/views/layouts/application.html.erb
+      create  app/views/layouts/mailer.html.erb
+      create  app/views/layouts/mailer.text.erb
+      create  app/assets/images/.keep
+      create  app/assets/javascripts/channels
+      create  app/assets/javascripts/channels/.keep
+      create  app/controllers/concerns/.keep
+      create  app/models/concerns/.keep
+      create  bin
+      create  bin/bundle
+      create  bin/rails
+      create  bin/rake
+      create  bin/setup
+      create  bin/update
+      create  bin/yarn
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/secrets.yml
+      create  config/cable.yml
+      create  config/puma.rb
+      create  config/spring.rb
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/application_controller_renderer.rb
+      create  config/initializers/assets.rb
+      create  config/initializers/backtrace_silencers.rb
+      create  config/initializers/cookies_serializer.rb
+      create  config/initializers/cors.rb
+      create  config/initializers/filter_parameter_logging.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/mime_types.rb
+      create  config/initializers/new_framework_defaults_5_1.rb
+      create  config/initializers/wrap_parameters.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/boot.rb
+      create  config/database.yml
+      create  db
+      create  db/seeds.rb
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.keep
+      create  lib/assets
+      create  lib/assets/.keep
+      create  log
+      create  log/.keep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/apple-touch-icon-precomposed.png
+      create  public/apple-touch-icon.png
+      create  public/favicon.ico
+      create  public/robots.txt
+      create  tmp
+      create  tmp/.keep
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor
+      create  vendor/.keep
+      create  package.json
+      remove  config/initializers/cors.rb
+      remove  config/initializers/new_framework_defaults_5_1.rb
+         run  bundle install
+The latest bundler is 1.16.0, but you are currently running 1.15.4.
+To update, run `gem install bundler`
+The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+Fetching gem metadata from https://rubygems.org/..........
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Resolving dependencies...
+Using rake 12.2.1
+Using concurrent-ruby 1.0.5
+Using minitest 5.10.3
+Using thread_safe 0.3.6
+Using builder 3.2.3
+Using erubi 1.7.0
+Using mini_portile2 2.3.0
+Using crass 1.0.2
+Using rack 2.0.3
+Using nio4r 2.1.0
+Using websocket-extensions 0.1.2
+Fetching mini_mime 1.0.0
+Installing mini_mime 1.0.0
+Using arel 8.0.0
+Using bindex 0.5.0
+Using bundler 1.15.4
+Using byebug 9.1.0
+Using coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using method_source 0.9.0
+Using thor 0.20.0
+Using ffi 1.9.18
+Using multi_json 1.12.2
+Using rb-fsevent 0.10.2
+Using ruby_dep 1.5.0
+Fetching pg 0.21.0
+Installing pg 0.21.0 with native extensions
+Using puma 3.10.0
+Using tilt 2.0.8
+Using turbolinks-source 5.0.3
+Using i18n 0.9.1
+Using tzinfo 1.2.4
+Using nokogiri 1.8.1
+Using rack-test 0.7.0
+Using sprockets 3.7.1
+Using websocket-driver 0.6.5
+Using mail 2.7.0
+Using coffee-script 2.4.1
+Using uglifier 3.2.0
+Using rb-inotify 0.9.10
+Using turbolinks 5.0.1
+Using activesupport 5.1.4
+Using loofah 2.1.1
+Using listen 3.1.5
+Using sass-listen 4.0.0
+Using rails-dom-testing 2.0.3
+Using globalid 0.4.1
+Using activemodel 5.1.4
+Using jbuilder 2.7.0
+Using spring 2.0.2
+Using rails-html-sanitizer 1.0.3
+Using sass 3.5.3
+Using activejob 5.1.4
+Using activerecord 5.1.4
+Using spring-watcher-listen 2.0.1
+Using actionview 5.1.4
+Using actionpack 5.1.4
+Using actioncable 5.1.4
+Using actionmailer 5.1.4
+Using railties 5.1.4
+Using sprockets-rails 3.2.1
+Using coffee-rails 4.2.2
+Using web-console 3.5.1
+Using rails 5.1.4
+Using sass-rails 5.0.6
+Bundle complete! 14 Gemfile dependencies, 63 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+         run  bundle exec spring binstub --all
+* bin/rake: spring inserted
+* bin/rails: spring inserted
+learn13:activeRecordCC learn$ cd mydbapp/
+learn13:mydbapp learn$ ls
+Gemfile		Rakefile	config		lib		public
+Gemfile.lock	app		config.ru	log		tmp
+README.md	bin		db		package.json	vendor
+learn13:mydbapp learn$ rails s
+=> Booting Puma
+=> Rails 5.1.4 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.10.0 (ruby 2.3.1-p112), codename: Russell's Teapot
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/cars/create" for 127.0.0.1 at 2017-11-09 10:22:55 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/cars/create"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-11-09 10:23:01 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/learn/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/learn/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 437ms (Views: 5.4ms)
+
+
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2017-11-09 10:26:37 -0800 ===
+- Goodbye!
+Exiting
+learn13:mydbapp learn$ rails s
+=> Booting Puma
+=> Rails 5.1.4 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.10.0 (ruby 2.3.1-p112), codename: Russell's Teapot
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2017-11-09 10:31:22 -0800 ===
+- Goodbye!
+Exiting
+learn13:mydbapp learn$ rails db:create
+Created database 'mydbapp_development'
+Created database 'mydbapp_test'
+learn13:mydbapp learn$ rails s
+=> Booting Puma
+=> Rails 5.1.4 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.10.0 (ruby 2.3.1-p112), codename: Russell's Teapot
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2017-11-09 10:40:35 -0800 ===
+- Goodbye!
+Exiting
+learn13:mydbapp learn$ rails c
+Running via Spring preloader in process 76594
+Loading development environment (Rails 5.1.4)
+cannot load such file -- irbtools
+2.3.1 :001 > owner1 = Owner.new
+NameError: uninitialized constant Owner
+	from (irb):1
+2.3.1 :002 > owner = Owner.new
+NameError: uninitialized constant Owner
+	from (irb):2
+2.3.1 :003 > ;
+2.3.1 :004 >   end
+SyntaxError: (irb):4: syntax error, unexpected keyword_end, expecting end-of-input
+
+2.3.1 :005 > ^C
+2.3.1 :005 > exit
+learn13:mydbapp learn$ rails c
+Running via Spring preloader in process 76770
+Loading development environment (Rails 5.1.4)
+cannot load such file -- irbtools
+2.3.1 :001 > owner = Owner.new
+NameError: uninitialized constant Owner
+	from (irb):1
+2.3.1 :002 > owner = owner.new
+NoMethodError: undefined method `new' for nil:NilClass
+	from (irb):2
+2.3.1 :003 > owner = Owner.new
+NameError: uninitialized constant Owner
+	from (irb):3
+2.3.1 :004 > exit
+learn13:mydbapp learn$ rails c
+Running via Spring preloader in process 76788
+Loading development environment (Rails 5.1.4)
+cannot load such file -- irbtools
+2.3.1 :001 > owner = Owner.new
+NameError: uninitialized constant Owner
+	from (irb):1
+2.3.1 :002 > exit
+learn13:mydbapp learn$ rails c
+Running via Spring preloader in process 76801
+Loading development environment (Rails 5.1.4)
+cannot load such file -- irbtools
+2.3.1 :001 > owner = Owner.new
+ => #<Owner id: nil, name: nil, address: nil> 
+2.3.1 :002 > owner.name = "Snoop Dogg" 
+ => "Snoop Dogg" 
+2.3.1 :003 > owner
+ => #<Owner id: nil, name: "Snoop Dogg", address: nil> 
+2.3.1 :004 > owner.address = "Hollywood"
+ => "Hollywood" 
+2.3.1 :005 > owner
+ => #<Owner id: nil, name: "Snoop Dogg", address: "Hollywood"> 
+2.3.1 :006 > owner.save
+   (0.2ms)  BEGIN
+  SQL (0.6ms)  INSERT INTO "owners" ("name", "address") VALUES ($1, $2) RETURNING "id"  [["name", "Snoop Dogg"], ["address", "Hollywood"]]
+   (40.5ms)  COMMIT
+ => true 
+2.3.1 :007 > creditcard = Creditcard.new
+LoadError: Unable to autoload constant Creditcard, expected /Users/learn/Desktop/activeRecordCC/mydbapp/app/models/creditcard.rb to define it
+	from (irb):7
+2.3.1 :008 > creditcard = CreditCard.new
+ActiveRecord::StatementInvalid: PG::UndefinedTable: ERROR:  relation "credit_cards" does not exist
+LINE 8:                WHERE a.attrelid = '"credit_cards"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a
+                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                LEFT JOIN pg_type t ON a.atttypid = t.oid
+                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+               WHERE a.attrelid = '"credit_cards"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+	from (irb):8
+2.3.1 :009 > exit
+learn13:mydbapp learn$ rails c
+Running via Spring preloader in process 76859
+Loading development environment (Rails 5.1.4)
+cannot load such file -- irbtools
+2.3.1 :001 > creditcard = CreditCard.new
+ActiveRecord::StatementInvalid: PG::UndefinedTable: ERROR:  relation "credit_cards" does not exist
+LINE 8:                WHERE a.attrelid = '"credit_cards"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a
+                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                LEFT JOIN pg_type t ON a.atttypid = t.oid
+                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+               WHERE a.attrelid = '"credit_cards"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+	from (irb):1
+2.3.1 :002 > exit
+learn13:mydbapp learn$ rails c
+Running via Spring preloader in process 76880
+Loading development environment (Rails 5.1.4)
+cannot load such file -- irbtools
+2.3.1 :001 > creditcard = CreditCard.new
+ActiveRecord::StatementInvalid: PG::UndefinedTable: ERROR:  relation "credit_cards" does not exist
+LINE 8:                WHERE a.attrelid = '"credit_cards"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a
+                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                LEFT JOIN pg_type t ON a.atttypid = t.oid
+                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+               WHERE a.attrelid = '"credit_cards"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+	from (irb):1
+2.3.1 :002 > exit
+learn13:mydbapp learn$ rails c
+Running via Spring preloader in process 76899
+Loading development environment (Rails 5.1.4)
+cannot load such file -- irbtools
+2.3.1 :001 > creditcard = Creditcard.new
+ => #<Creditcard id: nil, cc_number: nil, expiration_date: nil, owner_id: nil> 
+2.3.1 :002 > ALTER TABLE creditcards RENAME credit_cards
+NameError: undefined local variable or method `credit_cards' for main:Object
+Did you mean?  creditcard
+	from (irb):2
+2.3.1 :003 > ALTER TABLE creditcards RENAME TO credit_cards
+NameError: undefined local variable or method `credit_cards' for main:Object
+Did you mean?  creditcard
+	from (irb):3
+2.3.1 :004 > ALTER TABLE creditcards RENAME TABLE TO credit_cards
+NameError: undefined local variable or method `credit_cards' for main:Object
+Did you mean?  creditcard
+	from (irb):4
+2.3.1 :005 > exit
+learn13:mydbapp learn$ rails c
+Running via Spring preloader in process 76947
+Loading development environment (Rails 5.1.4)
+cannot load such file -- irbtools
+2.3.1 :001 > creditcard = CreditCard.new
+ => #<CreditCard id: nil, cc_number: nil, expiration_date: nil, owner_id: nil> 
+2.3.1 :002 > creditcard.cc_number = 1234567891234567
+ => 1234567891234567 
+2.3.1 :003 > creditcard.expiration_date = DateTime.now+5.year
+ => Wed, 09 Nov 2022 11:35:49 -0800 
+2.3.1 :004 > Snoop = Contact.find_by_name('Snoop Dogg')
+NameError: uninitialized constant Contact
+	from (irb):4
+2.3.1 :005 > Snoop = Owner.find_by_name('Snoop Dogg')
+  Owner Load (0.6ms)  SELECT  "owners".* FROM "owners" WHERE "owners"."name" = $1 LIMIT $2  [["name", "Snoop Dogg"], ["LIMIT", 1]]
+ => #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood"> 
+2.3.1 :006 > snoop.credit_cards << creditcard
+NameError: undefined local variable or method `snoop' for main:Object
+	from (irb):6
+2.3.1 :007 > Snoop.credit_cards << creditcard
+NoMethodError: undefined method `credit_cards' for #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood">
+Did you mean?  creditcards
+               creditcards=
+	from (irb):7
+2.3.1 :008 > Snoop.CreditCards << creditcard
+NoMethodError: undefined method `CreditCards' for #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood">
+Did you mean?  creditcards
+               creditcards=
+               creditcard_ids
+	from (irb):8
+2.3.1 :009 > Snoop.creditcards << creditcard
+NameError: uninitialized constant Owner::Creditcard
+	from (irb):9
+2.3.1 :010 > Snoop.credit_cards << creditcard
+NoMethodError: undefined method `credit_cards' for #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood">
+Did you mean?  creditcards
+               creditcards=
+	from (irb):10
+2.3.1 :011 > Snoop
+ => #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood"> 
+2.3.1 :012 > Snoop.creditcard << creditcard
+NoMethodError: undefined method `creditcard' for #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood">
+Did you mean?  creditcards
+               creditcards=
+	from (irb):12
+2.3.1 :013 > creditcard
+ => #<CreditCard id: nil, cc_number: 1234567891234567, expiration_date: "2022-11-09 19:35:49", owner_id: nil> 
+2.3.1 :014 > Snoop
+ => #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood"> 
+2.3.1 :015 > Snoop.cc_number
+NoMethodError: undefined method `cc_number' for #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood">
+	from (irb):15
+2.3.1 :016 > Snoop.credit_cards
+NoMethodError: undefined method `credit_cards' for #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood">
+Did you mean?  creditcards
+               creditcards=
+	from (irb):16
+2.3.1 :017 > Snoop.creditcards
+NameError: uninitialized constant Owner::Creditcard
+	from (irb):17
+2.3.1 :018 > exit
+learn13:mydbapp learn$ rails c
+Running via Spring preloader in process 77101
+Loading development environment (Rails 5.1.4)
+cannot load such file -- irbtools
+2.3.1 :001 > Snoop.credit_cards
+NameError: uninitialized constant Snoop
+	from (irb):1
+2.3.1 :002 > Snoop = Owner.find_by_id(1)
+  Owner Load (0.3ms)  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2  [["id", 1], ["LIMIT", 1]]
+ => #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood"> 
+2.3.1 :003 > Snoop.credit_cards 
+  CreditCard Load (0.2ms)  SELECT  "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."owner_id" = $1 LIMIT $2  [["owner_id", 1], ["LIMIT", 11]]
+ => #<ActiveRecord::Associations::CollectionProxy []> 
+2.3.1 :004 > creditcard
+NameError: undefined local variable or method `creditcard' for main:Object
+	from (irb):4
+2.3.1 :005 > creditcard = credit_cards.new
+NameError: undefined local variable or method `credit_cards' for main:Object
+Did you mean?  creditcard
+	from (irb):5
+2.3.1 :006 > creditcard = CreditCard.new
+ => #<CreditCard id: nil, cc_number: nil, expiration_date: nil, owner_id: nil> 
+2.3.1 :007 > creditcard.cc_number = 1231231231231231
+ => 1231231231231231 
+2.3.1 :008 > creditcard.expiration_date = Time.now +5.year
+ArgumentError: wrong number of arguments (given 1, expected 0)
+	from (irb):8:in `now'
+	from (irb):8
+2.3.1 :009 > creditcard.expiration_date = Time.now + 5.year
+ => 2022-11-09 11:56:37 -0800 
+2.3.1 :010 > creditcard
+ => #<CreditCard id: nil, cc_number: 1231231231231231, expiration_date: "2022-11-09 19:56:37", owner_id: nil> 
+2.3.1 :011 > Snoop.credit_cards << creditcard
+   (0.2ms)  BEGIN
+   (0.2ms)  ROLLBACK
+ActiveModel::RangeError: 1231231231231231 is out of range for ActiveModel::Type::Integer with limit 4 bytes
+	from (irb):11
+2.3.1 :012 > Snoop
+ => #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood"> 
+2.3.1 :013 > creditcard
+ => #<CreditCard id: nil, cc_number: 1231231231231231, expiration_date: "2022-11-09 19:56:37", owner_id: 1> 
+2.3.1 :014 > creditcard.save
+   (0.2ms)  BEGIN
+   (0.2ms)  ROLLBACK
+ActiveModel::RangeError: 1231231231231231 is out of range for ActiveModel::Type::Integer with limit 4 bytes
+	from (irb):14
+2.3.1 :015 > Snoop
+ => #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood"> 
+2.3.1 :016 > Snoop
+ => #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood"> 
+2.3.1 :017 > creditcard
+ => #<CreditCard id: nil, cc_number: 1231231231231231, expiration_date: "2022-11-09 19:56:37", owner_id: 1> 
+2.3.1 :018 > Snoop
+ => #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood"> 
+2.3.1 :019 > credit_card
+NameError: undefined local variable or method `credit_card' for main:Object
+Did you mean?  creditcard
+	from (irb):19
+2.3.1 :020 > creditcard
+ => #<CreditCard id: nil, cc_number: 1231231231231231, expiration_date: "2022-11-09 19:56:37", owner_id: 1> 
+2.3.1 :021 > Snoop
+ => #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood"> 
+2.3.1 :022 > creditcard.cc_number = "1231231231231231"
+ => "1231231231231231" 
+2.3.1 :023 > creditcard
+ => #<CreditCard id: nil, cc_number: 1231231231231231, expiration_date: "2022-11-09 19:56:37", owner_id: 1> 
+2.3.1 :024 > creditcard.update(cc_number: '1231231231231231');
+2.3.1 :025 >   creditcard
+   (0.2ms)  BEGIN
+   (0.2ms)  ROLLBACK
+ActiveModel::RangeError: 1231231231231231 is out of range for ActiveModel::Type::Integer with limit 4 bytes
+	from (irb):24
+2.3.1 :026 > exit
+learn13:mydbapp learn$ rails s
+=> Booting Puma
+=> Rails 5.1.4 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.10.0 (ruby 2.3.1-p112), codename: Russell's Teapot
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+exit
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2017-11-09 13:18:33 -0800 ===
+- Goodbye!
+Exiting
+learn13:mydbapp learn$ rails c
+Running via Spring preloader in process 77729
+Loading development environment (Rails 5.1.4)
+cannot load such file -- irbtools
+2.3.1 :001 > Snoop
+NameError: uninitialized constant Snoop
+	from (irb):1
+2.3.1 :002 > Snoop = owner.find_by_name('Snoop Dogg')
+NameError: undefined local variable or method `owner' for main:Object
+	from (irb):2
+2.3.1 :003 > Snoop = Owner.find_by_name('Snoop Dogg')
+  Owner Load (0.3ms)  SELECT  "owners".* FROM "owners" WHERE "owners"."name" = $1 LIMIT $2  [["name", "Snoop Dogg"], ["LIMIT", 1]]
+ => #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood"> 
+2.3.1 :004 > creditcard
+NameError: undefined local variable or method `creditcard' for main:Object
+	from (irb):4
+2.3.1 :005 > creditcard = CreditCard.new(cc_number: "1234123412341234", expiration_date: Time.now + 5.year, owner_id: 1)
+ => #<CreditCard id: nil, cc_number: "1234123412341234", expiration_date: "2022-11-09 21:23:19", owner_id: 1> 
+2.3.1 :006 > creditcard.save
+   (0.2ms)  BEGIN
+  Owner Load (0.2ms)  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2  [["id", 1], ["LIMIT", 1]]
+  SQL (0.8ms)  INSERT INTO "credit_cards" ("cc_number", "expiration_date", "owner_id") VALUES ($1, $2, $3) RETURNING "id"  [["cc_number", "1234123412341234"], ["expiration_date", "2022-11-09 21:23:19.268665"], ["owner_id", 1]]
+   (0.6ms)  COMMIT
+ => true 
+2.3.1 :007 > Snoop
+ => #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood"> 
+2.3.1 :008 > Snoop
+ => #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood"> 
+2.3.1 :009 > Snoop.credit_cards
+  CreditCard Load (0.3ms)  SELECT  "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."owner_id" = $1 LIMIT $2  [["owner_id", 1], ["LIMIT", 11]]
+ => #<ActiveRecord::Associations::CollectionProxy [#<CreditCard id: 1, cc_number: "1234123412341234", expiration_date: "2022-11-09 21:23:19", owner_id: 1>]> 
+2.3.1 :010 > new_card = CreditCard.new(cc_number: "4321432143214321", expiration_date: Time.now + 6.year)
+ => #<CreditCard id: nil, cc_number: "4321432143214321", expiration_date: "2023-11-09 21:28:03", owner_id: nil> 
+2.3.1 :011 > new_card
+ => #<CreditCard id: nil, cc_number: "4321432143214321", expiration_date: "2023-11-09 21:28:03", owner_id: nil> 
+2.3.1 :012 > new_card.save
+   (0.2ms)  BEGIN
+   (0.2ms)  ROLLBACK
+ => false 
+2.3.1 :013 > Snoop.creditcard
+NoMethodError: undefined method `creditcard' for #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood">
+Did you mean?  credit_cards
+               credit_cards=
+	from (irb):13
+2.3.1 :014 > Snoop.credit_card << new_card
+NoMethodError: undefined method `credit_card' for #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood">
+Did you mean?  credit_cards
+               credit_cards=
+	from (irb):14
+2.3.1 :015 > Snoop.credit_cards << new_card
+   (0.2ms)  BEGIN
+  SQL (0.5ms)  INSERT INTO "credit_cards" ("cc_number", "expiration_date", "owner_id") VALUES ($1, $2, $3) RETURNING "id"  [["cc_number", "4321432143214321"], ["expiration_date", "2023-11-09 21:28:03.806826"], ["owner_id", 1]]
+   (0.5ms)  COMMIT
+  CreditCard Load (0.3ms)  SELECT  "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."owner_id" = $1 LIMIT $2  [["owner_id", 1], ["LIMIT", 11]]
+ => #<ActiveRecord::Associations::CollectionProxy [#<CreditCard id: 1, cc_number: "1234123412341234", expiration_date: "2022-11-09 21:23:19", owner_id: 1>, #<CreditCard id: 2, cc_number: "4321432143214321", expiration_date: "2023-11-09 21:28:03", owner_id: 1>]> 
+2.3.1 :016 > new_owner = Owner.new(name: "Bob Marley", address: "420 blunt blvd.")
+ => #<Owner id: nil, name: "Bob Marley", address: "420 blunt blvd."> 
+2.3.1 :017 > new_owner
+ => #<Owner id: nil, name: "Bob Marley", address: "420 blunt blvd."> 
+2.3.1 :018 > new_owner.save
+   (0.1ms)  BEGIN
+  SQL (0.5ms)  INSERT INTO "owners" ("name", "address") VALUES ($1, $2) RETURNING "id"  [["name", "Bob Marley"], ["address", "420 blunt blvd."]]
+   (0.5ms)  COMMIT
+ => true 
+2.3.1 :019 > another_cc = CreditCard.new(cc_number: "5678567856785678", expiration_date: Time.now + 3.year)
+ => #<CreditCard id: nil, cc_number: "5678567856785678", expiration_date: "2020-11-09 21:33:11", owner_id: nil> 
+2.3.1 :020 > another_cc.save
+   (0.1ms)  BEGIN
+   (0.2ms)  ROLLBACK
+ => false 
+2.3.1 :021 > bob = owner.find_by_name("Bob Marley")
+NameError: undefined local variable or method `owner' for main:Object
+	from (irb):21
+2.3.1 :022 > bob = Owner.find_by_name("Bob Marley")
+  Owner Load (0.3ms)  SELECT  "owners".* FROM "owners" WHERE "owners"."name" = $1 LIMIT $2  [["name", "Bob Marley"], ["LIMIT", 1]]
+ => #<Owner id: 2, name: "Bob Marley", address: "420 blunt blvd."> 
+2.3.1 :023 > bob.credit_cards << another_cc
+   (0.2ms)  BEGIN
+  SQL (0.5ms)  INSERT INTO "credit_cards" ("cc_number", "expiration_date", "owner_id") VALUES ($1, $2, $3) RETURNING "id"  [["cc_number", "5678567856785678"], ["expiration_date", "2020-11-09 21:33:11.686425"], ["owner_id", 2]]
+   (0.4ms)  COMMIT
+  CreditCard Load (0.3ms)  SELECT  "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."owner_id" = $1 LIMIT $2  [["owner_id", 2], ["LIMIT", 11]]
+ => #<ActiveRecord::Associations::CollectionProxy [#<CreditCard id: 3, cc_number: "5678567856785678", expiration_date: "2020-11-09 21:33:11", owner_id: 2>]> 
+2.3.1 :024 > bob
+ => #<Owner id: 2, name: "Bob Marley", address: "420 blunt blvd."> 
+2.3.1 :025 > bob.credit_cards
+  CreditCard Load (0.4ms)  SELECT  "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."owner_id" = $1 LIMIT $2  [["owner_id", 2], ["LIMIT", 11]]
+ => #<ActiveRecord::Associations::CollectionProxy [#<CreditCard id: 3, cc_number: "5678567856785678", expiration_date: "2020-11-09 21:33:11", owner_id: 2>]> 
+2.3.1 :026 > bob.save
+   (0.2ms)  BEGIN
+   (0.2ms)  COMMIT
+ => true 
+2.3.1 :027 > new_cc = CreditCard.new(cc_number: "9876987698769876", expiration_date: Time.now + 8.year)
+ => #<CreditCard id: nil, cc_number: "9876987698769876", expiration_date: "2025-11-09 21:37:37", owner_id: nil> 
+2.3.1 :028 > bob.credit_cards << new_cc
+   (0.2ms)  BEGIN
+  SQL (0.5ms)  INSERT INTO "credit_cards" ("cc_number", "expiration_date", "owner_id") VALUES ($1, $2, $3) RETURNING "id"  [["cc_number", "9876987698769876"], ["expiration_date", "2025-11-09 21:37:37.963762"], ["owner_id", 2]]
+   (0.4ms)  COMMIT
+  CreditCard Load (0.3ms)  SELECT  "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."owner_id" = $1 LIMIT $2  [["owner_id", 2], ["LIMIT", 11]]
+ => #<ActiveRecord::Associations::CollectionProxy [#<CreditCard id: 3, cc_number: "5678567856785678", expiration_date: "2020-11-09 21:33:11", owner_id: 2>, #<CreditCard id: 4, cc_number: "9876987698769876", expiration_date: "2025-11-09 21:37:37", owner_id: 2>]> 
+2.3.1 :029 > bob.save
+   (0.1ms)  BEGIN
+   (0.1ms)  COMMIT
+ => true 
+2.3.1 :030 > credit_cards.update(id: 3, credit_limit: 4000)
+NameError: undefined local variable or method `credit_cards' for main:Object
+Did you mean?  creditcard
+	from (irb):30
+2.3.1 :031 > CreditCard.update(id: 3, credit_limit: 4000)
+  CreditCard Load (0.4ms)  SELECT "credit_cards".* FROM "credit_cards"
+   (0.1ms)  BEGIN
+  Owner Load (0.3ms)  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2  [["id", 2], ["LIMIT", 1]]
+   (0.2ms)  COMMIT
+   (0.1ms)  BEGIN
+  Owner Load (0.3ms)  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2  [["id", 2], ["LIMIT", 1]]
+  SQL (1.0ms)  UPDATE "credit_cards" SET "id" = $1 WHERE "credit_cards"."id" = $2  [["id", 3], ["id", 4]]
+   (0.1ms)  ROLLBACK
+ActiveRecord::RecordNotUnique: PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "creditcards_pkey"
+DETAIL:  Key (id)=(3) already exists.
+: UPDATE "credit_cards" SET "id" = $1 WHERE "credit_cards"."id" = $2
+	from (irb):31
+2.3.1 :032 > Snoop.update(credit_limit: 4000)
+   (0.2ms)  BEGIN
+   (0.2ms)  ROLLBACK
+ActiveModel::UnknownAttributeError: unknown attribute 'credit_limit' for Owner.
+	from (irb):32
+2.3.1 :033 > exit
+learn13:mydbapp learn$ rails c
+Running via Spring preloader in process 77999
+Loading development environment (Rails 5.1.4)
+cannot load such file -- irbtools
+2.3.1 :001 > CreditCard.update(id: 3, credit_limit: 4000)
+  CreditCard Load (0.5ms)  SELECT "credit_cards".* FROM "credit_cards"
+   (0.2ms)  BEGIN
+  Owner Load (0.3ms)  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2  [["id", 2], ["LIMIT", 1]]
+  SQL (0.6ms)  UPDATE "credit_cards" SET "credit_limit" = $1 WHERE "credit_cards"."id" = $2  [["credit_limit", 4000], ["id", 3]]
+   (0.4ms)  COMMIT
+   (0.1ms)  BEGIN
+  Owner Load (0.3ms)  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2  [["id", 2], ["LIMIT", 1]]
+  SQL (0.9ms)  UPDATE "credit_cards" SET "id" = $1, "credit_limit" = $2 WHERE "credit_cards"."id" = $3  [["id", 3], ["credit_limit", 4000], ["id", 4]]
+   (0.2ms)  ROLLBACK
+ActiveRecord::RecordNotUnique: PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "creditcards_pkey"
+DETAIL:  Key (id)=(3) already exists.
+: UPDATE "credit_cards" SET "id" = $1, "credit_limit" = $2 WHERE "credit_cards"."id" = $3
+	from (irb):1
+2.3.1 :002 > CreditCard.update(id: 3, credit_limit: 4000)
+  CreditCard Load (0.4ms)  SELECT "credit_cards".* FROM "credit_cards"
+   (0.1ms)  BEGIN
+  Owner Load (0.3ms)  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2  [["id", 2], ["LIMIT", 1]]
+  SQL (1.1ms)  UPDATE "credit_cards" SET "id" = $1, "credit_limit" = $2 WHERE "credit_cards"."id" = $3  [["id", 3], ["credit_limit", 4000], ["id", 4]]
+   (0.2ms)  ROLLBACK
+ActiveRecord::RecordNotUnique: PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "creditcards_pkey"
+DETAIL:  Key (id)=(3) already exists.
+: UPDATE "credit_cards" SET "id" = $1, "credit_limit" = $2 WHERE "credit_cards"."id" = $3
+	from (irb):2
+2.3.1 :003 > CreditCard.find(3).update(credit_limit: 4000)
+  CreditCard Load (0.3ms)  SELECT  "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."id" = $1 LIMIT $2  [["id", 3], ["LIMIT", 1]]
+   (0.1ms)  BEGIN
+  Owner Load (0.3ms)  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2  [["id", 2], ["LIMIT", 1]]
+   (0.2ms)  COMMIT
+ => true 
+2.3.1 :004 > CreditCard.find(4).update(credit_limit: 100000000000)
+  CreditCard Load (0.4ms)  SELECT  "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."id" = $1 LIMIT $2  [["id", 4], ["LIMIT", 1]]
+   (0.1ms)  BEGIN
+  Owner Load (0.3ms)  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2  [["id", 2], ["LIMIT", 1]]
+   (0.2ms)  ROLLBACK
+ActiveModel::RangeError: 100000000000 is out of range for ActiveModel::Type::Integer with limit 4 bytes
+	from (irb):4
+2.3.1 :005 > CreditCard.find(4).update(credit_limit: 2.50)
+  CreditCard Load (0.3ms)  SELECT  "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."id" = $1 LIMIT $2  [["id", 4], ["LIMIT", 1]]
+   (0.1ms)  BEGIN
+  Owner Load (0.3ms)  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2  [["id", 2], ["LIMIT", 1]]
+  SQL (0.4ms)  UPDATE "credit_cards" SET "credit_limit" = $1 WHERE "credit_cards"."id" = $2  [["credit_limit", 2], ["id", 4]]
+   (0.4ms)  COMMIT
+ => true 
+2.3.1 :006 > Snoop =  Owner.find_by_name("Snoop Dogg")
+  Owner Load (0.3ms)  SELECT  "owners".* FROM "owners" WHERE "owners"."name" = $1 LIMIT $2  [["name", "Snoop Dogg"], ["LIMIT", 1]]
+ => #<Owner id: 1, name: "Snoop Dogg", address: "Hollywood"> 
+2.3.1 :007 > Snoop.credit_cards
+  CreditCard Load (0.5ms)  SELECT  "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."owner_id" = $1 LIMIT $2  [["owner_id", 1], ["LIMIT", 11]]
+ => #<ActiveRecord::Associations::CollectionProxy [#<CreditCard id: 1, cc_number: "1234123412341234", expiration_date: "2022-11-09 21:23:19", owner_id: 1, credit_limit: 1000000>, #<CreditCard id: 2, cc_number: "4321432143214321", expiration_date: "2023-11-09 21:28:03", owner_id: 1, credit_limit: 1000000>]> 
+2.3.1 :008 > Snoop.credit_cards.find_by_owner_id(1)
+  CreditCard Load (0.2ms)  SELECT  "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."owner_id" = $1 AND "credit_cards"."owner_id" = $2 LIMIT $3  [["owner_id", 1], ["owner_id", 1], ["LIMIT", 1]]
+ => #<CreditCard id: 1, cc_number: "1234123412341234", expiration_date: "2022-11-09 21:23:19", owner_id: 1, credit_limit: 1000000> 
+2.3.1 :009 > Snoop.credit_cards.find_by_owner_id(1).credit_limit
+  CreditCard Load (0.4ms)  SELECT  "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."owner_id" = $1 AND "credit_cards"."owner_id" = $2 LIMIT $3  [["owner_id", 1], ["owner_id", 1], ["LIMIT", 1]]
+ => 1000000 
+2.3.1 :010 > Snoop.credit_cards.find_by_owner_id(1).credit_limit.find(1,2)
+  CreditCard Load (0.4ms)  SELECT  "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."owner_id" = $1 AND "credit_cards"."owner_id" = $2 LIMIT $3  [["owner_id", 1], ["owner_id", 1], ["LIMIT", 1]]
+NoMethodError: undefined method `find' for 1000000:Fixnum
+	from (irb):10
+2.3.1 :011 > Snoop.credit_cards.find_by_owner_id(1).find(2)
+  CreditCard Load (0.5ms)  SELECT  "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."owner_id" = $1 AND "credit_cards"."owner_id" = $2 LIMIT $3  [["owner_id", 1], ["owner_id", 1], ["LIMIT", 1]]
+NoMethodError: undefined method `find' for #<CreditCard:0x007f9c9e217ea0>
+	from (irb):11
+2.3.1 :012 > Snoop.credit_cards.find_by_owner_id(1).credit_cards.find(2)
+  CreditCard Load (0.4ms)  SELECT  "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."owner_id" = $1 AND "credit_cards"."owner_id" = $2 LIMIT $3  [["owner_id", 1], ["owner_id", 1], ["LIMIT", 1]]
+NoMethodError: undefined method `credit_cards' for #<CreditCard:0x007f9c9c029a28>
+Did you mean?  credit_limit_was
+	from (irb):12
+2.3.1 :013 > Snoop.credit_cards.find_by_owner_id(1).credit_cards.find(2)
+  CreditCard Load (0.4ms)  SELECT  "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."owner_id" = $1 AND "credit_cards"."owner_id" = $2 LIMIT $3  [["owner_id", 1], ["owner_id", 1], ["LIMIT", 1]]
+NoMethodError: undefined method `credit_cards' for #<CreditCard:0x007f9c9e963f88>
+Did you mean?  credit_limit_was
+	from (irb):13
+2.3.1 :014 > owners.find
+NameError: undefined local variable or method `owners' for main:Object
+	from (irb):14
+2.3.1 :015 > owners.find
+owners.find                                 owners.find_in_batches
+owners.find_active_stub_by_path             owners.find_in_source_paths
+owners.find_all                             owners.find_in_unresolved
+owners.find_all_anywhere                    owners.find_in_unresolved_tree
+owners.find_all_by_name                     owners.find_inactive_by_path
+owners.find_all_linked_assets               owners.find_index
+owners.find_all_with_query                  owners.find_indexed_specs
+owners.find_and_refresh_command             owners.find_item_by_name
+owners.find_and_refresh_task                owners.find_latest_files
+owners.find_asset                           owners.find_logical_paths
+owners.find_beginning_of_week!              owners.find_mime_type_matches
+owners.find_best_mime_type_match            owners.find_name
+owners.find_best_q_match                    owners.find_or_create_by
+owners.find_by                              owners.find_or_create_by!
+owners.find_by!                             owners.find_or_initialize_by
+owners.find_by_name                         owners.find_proxy
+owners.find_by_name_and_platform            owners.find_q_matches
+owners.find_by_namespace                    owners.find_real_file
+owners.find_by_owner_id                     owners.find_relative
+owners.find_by_path                         owners.find_relative_url_root
+owners.find_by_sql                          owners.find_resolved_spec
+owners.find_by_type                         owners.find_root
+owners.find_class_and_command_by_namespace  owners.find_root_with_flag
+2.3.1 :015 > credit_cards.find_by_owner_id
+NameError: undefined local variable or method `credit_cards' for main:Object
+	from (irb):15
+2.3.1 :016 > CreditCards.find_by_owner_id
+NameError: uninitialized constant CreditCards
+	from (irb):16
+2.3.1 :017 > credit_cards.find_by_owner_id(1)
+NameError: undefined local variable or method `credit_cards' for main:Object
+	from (irb):17
+2.3.1 :018 > CreditCard.find_by_owner_id(1)
+  CreditCard Load (0.3ms)  SELECT  "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."owner_id" = $1 LIMIT $2  [["owner_id", 1], ["LIMIT", 1]]
+ => #<CreditCard id: 1, cc_number: "1234123412341234", expiration_date: "2022-11-09 21:23:19", owner_id: 1, credit_limit: 1000000> 
+2.3.1 :019 > CreditCard.where(owner_id:1)
+  CreditCard Load (0.3ms)  SELECT  "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."owner_id" = $1 LIMIT $2  [["owner_id", 1], ["LIMIT", 11]]
+ => #<ActiveRecord::Relation [#<CreditCard id: 1, cc_number: "1234123412341234", expiration_date: "2022-11-09 21:23:19", owner_id: 1, credit_limit: 1000000>, #<CreditCard id: 2, cc_number: "4321432143214321", expiration_date: "2023-11-09 21:28:03", owner_id: 1, credit_limit: 1000000>]> 
+2.3.1 :020 > Snoops_cards = CreditCard.where(owner_id:1)
+  CreditCard Load (0.4ms)  SELECT  "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."owner_id" = $1 LIMIT $2  [["owner_id", 1], ["LIMIT", 11]]
+ => #<ActiveRecord::Relation [#<CreditCard id: 1, cc_number: "1234123412341234", expiration_date: "2022-11-09 21:23:19", owner_id: 1, credit_limit: 1000000>, #<CreditCard id: 2, cc_number: "4321432143214321", expiration_date: "2023-11-09 21:28:03", owner_id: 1, credit_limit: 1000000>]> 
+2.3.1 :021 > Snoops_cards
+  CreditCard Load (0.3ms)  SELECT  "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."owner_id" = $1 LIMIT $2  [["owner_id", 1], ["LIMIT", 11]]
+ => #<ActiveRecord::Relation [#<CreditCard id: 1, cc_number: "1234123412341234", expiration_date: "2022-11-09 21:23:19", owner_id: 1, credit_limit: 1000000>, #<CreditCard id: 2, cc_number: "4321432143214321", expiration_date: "2023-11-09 21:28:03", owner_id: 1, credit_limit: 1000000>]> 
+2.3.1 :022 > Snoops_cards[0].last + Snoops_cards[1].last
+  CreditCard Load (0.3ms)  SELECT "credit_cards".* FROM "credit_cards" WHERE "credit_cards"."owner_id" = $1  [["owner_id", 1]]
+NoMethodError: undefined method `last' for #<CreditCard:0x007f9c9e9e9bb0>
+	from (irb):22
+2.3.1 :023 > Snoops_cards[0].credit_limit
+ => 1000000 
+2.3.1 :024 > Snoops_cards[0].credit_limit + Snoops_cards[1].credit_limit
+ => 2000000 
+2.3.1 :025 > Snoops_cards.sum(:credit_limit)
+   (0.3ms)  SELECT SUM("credit_cards"."credit_limit") FROM "credit_cards" WHERE "credit_cards"."owner_id" = $1  [["owner_id", 1]]
+ => 2000000 
+2.3.1 :026 > 
